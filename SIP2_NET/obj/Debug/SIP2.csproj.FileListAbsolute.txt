@@ -13,3 +13,13 @@ C:\Users\mlesniak\Desktop\Programming\C#\SessionSoft\Client\SIP2_DLL\obj\Debug\S
 C:\Users\mlesniak\Desktop\Programming\C#\SessionSoft\Client\SIP2_DLL\obj\Debug\SIP2.pdb
 C:\Users\mlesniak\Desktop\Programming\C#\SessionSoft\Client\SIP2_DLL\bin\Debug\SIP2.dll
 C:\Users\mlesniak\Desktop\Programming\C#\SessionSoft\Client\SIP2_DLL\bin\Debug\SIP2.pdb
+C:\Users\sheng\Documents\Github\SIP2\SIP2_NET\bin\Debug\SIP2.dll.config
+C:\Users\sheng\Documents\Github\SIP2\SIP2_NET\bin\Debug\SIP2.dll
+C:\Users\sheng\Documents\Github\SIP2\SIP2_NET\bin\Debug\SIP2.pdb
+C:\Users\sheng\Documents\Github\SIP2\SIP2_NET\bin\Debug\zh-CHS\SIP2.resources.dll
+C:\Users\sheng\Documents\Github\SIP2\SIP2_NET\obj\Debug\SIP2.Languages.Language.resources
+C:\Users\sheng\Documents\Github\SIP2\SIP2_NET\obj\Debug\SIP2.Languages.Language.zh-CHS.resources
+C:\Users\sheng\Documents\Github\SIP2\SIP2_NET\obj\Debug\SIP2.csproj.GenerateResource.Cache
+C:\Users\sheng\Documents\Github\SIP2\SIP2_NET\obj\Debug\zh-CHS\SIP2.resources.dll
+C:\Users\sheng\Documents\Github\SIP2\SIP2_NET\obj\Debug\SIP2.dll
+C:\Users\sheng\Documents\Github\SIP2\SIP2_NET\obj\Debug\SIP2.pdb

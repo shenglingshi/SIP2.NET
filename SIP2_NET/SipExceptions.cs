@@ -39,6 +39,8 @@ namespace SIP2
     {
         public ConnectionFailedException() {}
         public ConnectionFailedException(string message) : base(message) { }
+
+        public ConnectionFailedException(string message,Exception innerException) : base(message, innerException) { }
     }
 
     public class HandshakeFailedException : Exception

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SIP2</RootNamespace>
     <AssemblyName>SIP2</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -46,15 +46,117 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CheckSum.cs" />
+    <Compile Include="Core\Command\BaseCommand.cs" />
+    <Compile Include="Core\Command\BaseItemCommand.cs" />
+    <Compile Include="Core\Command\BasePatronItemCommand.cs" />
+    <Compile Include="Core\Command\BaseTerminalItemCommand.cs" />
+    <Compile Include="Core\Command\BaseTerminalPatronCommand.cs" />
+    <Compile Include="Core\Command\BaseTerminalPatronItemCommand.cs" />
+    <Compile Include="Core\Field\BaseField.cs" />
+    <Compile Include="Core\Field\BaseSignleValueField.cs" />
+    <Compile Include="Core\Field\IField.cs" />
+    <Compile Include="Core\LanguageResource.cs" />
+    <Compile Include="Core\ParameterException.cs" />
+    <Compile Include="Field\BlockedCardMsgField.cs" />
+    <Compile Include="Field\CancelField.cs" />
+    <Compile Include="Field\CardRetainedField.cs" />
+    <Compile Include="Field\Fixed\IsOkField.cs" />
+    <Compile Include="Field\Variable\Patron\EmailAddressField.cs" />
+    <Compile Include="Field\EndItemField.cs" />
+    <Compile Include="Field\FeeAcknowledgedField.cs" />
+    <Compile Include="Field\Variable\Patron\FineItemsField.cs" />
+    <Compile Include="Field\Variable\Patron\ChargedItemsField.cs" />
+    <Compile Include="Field\Variable\Patron\OverdueItemsField.cs" />
+    <Compile Include="Field\Variable\Patron\HoldItemsField.cs" />
+    <Compile Include="Field\Variable\Patron\FeeAmountField.cs" />
+    <Compile Include="Field\Variable\Patron\FeeLimitField.cs" />
+    <Compile Include="Field\Fixed\Patron\CurrencyTypeField.cs" />
+    <Compile Include="Field\Fixed\Patron\ChargedItemsCountField.cs" />
+    <Compile Include="Field\Fixed\Patron\ChargeItemsLimitField.cs" />
+    <Compile Include="Field\Fixed\Patron\FineItemsCountField.cs" />
+    <Compile Include="Field\Fixed\Patron\HoldItemsCountField.cs" />
+    <Compile Include="Field\Fixed\Patron\OverdueItemsCountField.cs" />
+    <Compile Include="Field\Fixed\Patron\OverdueItemsLimitField.cs" />
+    <Compile Include="Field\Fixed\Patron\RecallItemsCountField.cs" />
+    <Compile Include="Field\Fixed\Patron\UnavailableHoldsCountField.cs" />
+    <Compile Include="Field\Fixed\Patron\ValidPatronField.cs" />
+    <Compile Include="Field\Fixed\Patron\ValidPatronPasswordField.cs" />
+    <Compile Include="Field\Variable\Patron\HomeAddressField.cs" />
+    <Compile Include="Field\Variable\Patron\HomePhoneNumberField.cs" />
+    <Compile Include="Field\Fixed\Patron\HoldItemsLimitField.cs" />
+    <Compile Include="Field\Variable\Patron\InstitutionIdField.cs" />
+    <Compile Include="Field\CurrentLocationField.cs" />
+    <Compile Include="Field\ItemIdentifierField.cs" />
+    <Compile Include="Field\ItemPropertiesField.cs" />
+    <Compile Include="Field\Fixed\LanguageField.cs" />
+    <Compile Include="Field\LocationCodeField.cs" />
+    <Compile Include="Field\LoginPasswordField.cs" />
+    <Compile Include="Field\NbDueDateField.cs" />
+    <Compile Include="Field\Variable\Patron\PatronIdentifierField.cs" />
+    <Compile Include="Field\PatronPasswordField.cs" />
+    <Compile Include="Field\Fixed\Patron\PatronStatusField.cs" />
+    <Compile Include="Field\Variable\Patron\PersonalNameField.cs" />
+    <Compile Include="Field\SingleBoolValueField.cs" />
+    <Compile Include="Field\SingleIntValueField.cs" />
+    <Compile Include="Field\SingleStringValueField.cs" />
+    <Compile Include="Field\StartItemField.cs" />
+    <Compile Include="Field\TerminalPasswordField.cs" />
+    <Compile Include="Field\Fixed\TransactionDateField.cs" />
+    <Compile Include="Field\LoginUserIdField.cs" />
+    <Compile Include="Field\Variable\Patron\RecallItemsField.cs" />
+    <Compile Include="Field\Variable\Patron\ScreenMessageField.cs" />
+    <Compile Include="InvengoSip.cs" />
+    <Compile Include="InvengoSipBuilder.cs" />
     <Compile Include="Item.cs" />
+    <Compile Include="Languages\Language.zh-CHS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Language.zh-CHS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Languages\Language.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Language.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ItemModel.cs" />
+    <Compile Include="Model\PatronModel.cs" />
+    <Compile Include="Request\BaseRequestCommand.cs" />
+    <Compile Include="Core\Command\ICommand.cs" />
+    <Compile Include="Request\BlockPatronRequestCommand.cs" />
+    <Compile Include="Request\CheckInRequestCommand.cs" />
+    <Compile Include="Request\CheckoutRequestCommand.cs" />
+    <Compile Include="Request\ItemInfoRequestCommand.cs" />
+    <Compile Include="Request\LoginRequestCommand.cs" />
+    <Compile Include="Request\PatronInformationRequestCommand.cs" />
+    <Compile Include="Request\PatronStatusRequestCommand.cs" />
+    <Compile Include="Request\RenewAllRequestCommand.cs" />
+    <Compile Include="Request\RenewRequestCommand.cs" />
+    <Compile Include="Request\ResendRequestCommand.cs" />
+    <Compile Include="Request\ScStatusRequestCommand.cs" />
+    <Compile Include="Response\BasePatronResponseCommand.cs" />
+    <Compile Include="Response\BaseResponseCommand.cs" />
+    <Compile Include="Response\LoginResponseCommand.cs" />
+    <Compile Include="Response\PatronInformationResponseCommand.cs" />
     <Compile Include="SipExceptions.cs" />
     <Compile Include="Patron.cs" />
     <Compile Include="SIP.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\RequestCommandUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Languages\Language.zh-CHS.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language.zh-CHS.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Languages\Language.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

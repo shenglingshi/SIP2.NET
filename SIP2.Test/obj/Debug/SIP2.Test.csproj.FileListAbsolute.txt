@@ -1,0 +1,8 @@
+C:\Users\sheng\Documents\Github\SIP2\SIP2.Test\bin\Debug\SIP2.Test.dll
+C:\Users\sheng\Documents\Github\SIP2\SIP2.Test\bin\Debug\SIP2.Test.pdb
+C:\Users\sheng\Documents\Github\SIP2\SIP2.Test\bin\Debug\SIP2.dll
+C:\Users\sheng\Documents\Github\SIP2\SIP2.Test\bin\Debug\SIP2.pdb
+C:\Users\sheng\Documents\Github\SIP2\SIP2.Test\obj\Debug\SIP2.Test.csprojResolveAssemblyReference.cache
+C:\Users\sheng\Documents\Github\SIP2\SIP2.Test\obj\Debug\SIP2.Test.dll
+C:\Users\sheng\Documents\Github\SIP2\SIP2.Test\obj\Debug\SIP2.Test.pdb
+C:\Users\sheng\Documents\Github\SIP2\SIP2.Test\bin\Debug\zh-CHS\SIP2.resources.dll
