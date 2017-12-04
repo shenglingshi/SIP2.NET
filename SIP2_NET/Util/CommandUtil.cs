@@ -8,7 +8,7 @@ namespace SIP2.Util
     /// <summary>
     /// 请求实用函数
     /// </summary>
-    public static class RequestCommandUtil
+    public static class CommandUtil
     {
         /// <summary>
         /// 获取日期值
@@ -44,7 +44,7 @@ namespace SIP2.Util
 
         public static DateTime GetDate(string dateString)
         {
-            return DateTime.ParseExact(dateString, "YYYYMMDD    HHMMSS",System.Globalization.CultureInfo.CurrentCulture);
+            return DateTime.ParseExact(dateString, "yyyyMMdd    HHmmss", System.Globalization.CultureInfo.CurrentCulture);
         }
 
         /// <summary>
@@ -61,7 +61,17 @@ namespace SIP2.Util
             return "N";
         }
 
-
+        public static bool GetBooleanValue(string value)
+        {
+            if (value.ToUpper().Equals("Y") || value.ToUpper().Equals("1"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
     }
 }

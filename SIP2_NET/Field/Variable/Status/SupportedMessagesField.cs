@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace SIP2.Field.Variable
 {
-    public sealed class SupportedMessageField:BaseField<string>
+    public sealed class SupportedMessagesField:BaseField<string>
     {
-        public SupportedMessageField() : base() { }
+        public SupportedMessagesField() : base() { }
 
-        public SupportedMessageField(string value) : base(value) { }
+        public SupportedMessagesField(string value) : base(value) { }
 
-        public SupportedMessageField(string id, string value) : base(id, value) { }
+        public SupportedMessagesField(string id, string value) : base(id, value) { }
 
         protected override void DefaultField()
         {

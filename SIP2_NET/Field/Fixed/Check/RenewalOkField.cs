@@ -18,6 +18,7 @@ namespace SIP2.Field.Fixed
             base.DefaultField();
             this._isFixed = true;
             this._fixedLength = 1;
+            this._isRequired = true;
         }
     }
 }

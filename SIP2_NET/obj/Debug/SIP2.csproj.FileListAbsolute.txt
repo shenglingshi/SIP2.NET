@@ -23,4 +23,3 @@ C:\Users\sheng\Documents\Github\SIP2\SIP2_NET\obj\Debug\SIP2.csproj.GenerateReso
 C:\Users\sheng\Documents\Github\SIP2\SIP2_NET\obj\Debug\zh-CHS\SIP2.resources.dll
 C:\Users\sheng\Documents\Github\SIP2\SIP2_NET\obj\Debug\SIP2.dll
 C:\Users\sheng\Documents\Github\SIP2\SIP2_NET\obj\Debug\SIP2.pdb
-C:\Users\sheng\Documents\Github\SIP2\SIP2_NET\obj\Debug\SIP2.csprojResolveAssemblyReference.cache

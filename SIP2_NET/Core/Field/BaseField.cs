@@ -187,7 +187,7 @@ namespace SIP2.Core.Field
             }
             if (this._value.GetType() == typeof(bool))
             {
-                fieldValue = RequestCommandUtil.GetBooleanString(Convert.ToBoolean(this._value));
+                fieldValue = CommandUtil.GetBooleanString(Convert.ToBoolean(this._value));
             }
 
             //是否是固定宽度

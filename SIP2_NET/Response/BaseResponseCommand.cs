@@ -42,22 +42,30 @@ namespace SIP2.Response
                             {
                                 continue;
                             }
+                        }else if(!string.IsNullOrEmpty(item.ID) && !this.Command.Contains(item.ID))
+                        {
+                            throw new ParameterException($"can not find property {item.Name} value");
                         }
-                        var property = this.GetType().GetProperty(item.Name);
+                        var property = this.GetType().GetProperties().SingleOrDefault(p => p.Name.Equals(item.Name, StringComparison.CurrentCultureIgnoreCase));// .GetProperty(item.Name,System.Reflection.BindingFlags.IgnoreCase);
                         if (property != null)
                         {
-                            string fieldValue = string.Empty;
+                            string fieldValueSegment = string.Empty;
                             if (item.IsFixed)
                             {
-                                fieldValue = GetFixedLengthFieldValue(position, item.FixedLength);
+                                fieldValueSegment = GetFixedLengthFieldValue(position, item.FixedLength);
                             }
                             else
                             {
-                                fieldValue = GetVariableLengthFieldValue(position, item.Split);
+                                fieldValueSegment = GetVariableLengthFieldValue(position, item.Split);
                             }
 
-                            if(!string.IsNullOrEmpty(fieldValue))
+                            if(!string.IsNullOrEmpty(fieldValueSegment))
                             {
+                                string fieldValue = fieldValueSegment;                   
+                                if (!string.IsNullOrEmpty(item.ID))
+                                {
+                                    fieldValue = fieldValueSegment.Replace(item.ID, "").Replace(item.Split,"");
+                                }
                                 //解析获取到的值
                                 if (property.PropertyType == typeof(int))
                                 {
@@ -65,27 +73,22 @@ namespace SIP2.Response
                                 }
                                 else if (property.PropertyType == typeof(DateTime))
                                 {
-                                    property.SetValue(this, RequestCommandUtil.GetDate(fieldValue));
+                                    property.SetValue(this, CommandUtil.GetDate(fieldValue));
                                 }
                                 else if (property.PropertyType == typeof(bool))
                                 {
-                                    if (fieldValue == "Y")
-                                    {
-                                        property.SetValue(this, true);
-                                    }
+                                    property.SetValue(this, CommandUtil.GetBooleanValue(fieldValue));
                                 }
-                                else
+                                else if (property.PropertyType == typeof(char))
+                                {
+                                    property.SetValue(this, fieldValue[0]);
+                                }
+                                else if(property.PropertyType ==  typeof(string))
                                 {
                                     property.SetValue(this, fieldValue);
                                 }
 
-                                position += fieldValue.Length;
-                            }else
-                            {
-                                if (item.IsRequired)
-                                {
-                                    throw new ParameterException($"can not find property {item.Name} value");
-                                }
+                                position += fieldValueSegment.Length;
                             }
                         }
                     }
@@ -118,8 +121,10 @@ namespace SIP2.Response
         /// <returns></returns>
         public virtual string GetVariableLengthFieldValue(int start,string split)
         {
-            var lastIndex = this._command.IndexOf(split, start);
-            return this._command.Substring(start - 1, lastIndex+1-start);
+            var startIndex = start - 1;
+            var lastIndex = this._command.IndexOf(split, startIndex);
+            var subString = this._command.Substring(startIndex, lastIndex+1- startIndex);
+            return subString;
         }
 
     }

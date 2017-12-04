@@ -23,6 +23,7 @@ namespace SIP2.Field.Variable
         {
             base.DefaultField();
             this._id = "AO";
+            this._isRequired = true;
         }
     }
 }

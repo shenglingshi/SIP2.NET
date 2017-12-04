@@ -15,13 +15,13 @@ namespace SIP2.Response
 
         public bool RenewalOk { get; set; }
 
-        public bool Resensitize { get; set; }
+        public bool Desensitize { get; set; }
 
         public char MagneticMedia { get; set; }
 
         public DateTime TransactionDate { get; set; }
 
-        public string InstitudionID { get; set; }
+        public string InstitutionID { get; set; }
 
         public string PatronIdentifier { get; set; }
 
@@ -68,7 +68,7 @@ namespace SIP2.Response
                 new ItemIdentifierField(),
                 new TitleIdentifierField(),
                 new DueDateField(),
-                new FeeTypeField(),
+                new FeeTypeField() { IsRequired=false },
                 new SecurityInhibitField(),
                 new CurrencyTypeField(),
                 new FeeAmountField(),

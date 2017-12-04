@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIP2.Core;
 using SIP2.Request;
+using SIP2.Core.Command;
 
 namespace SIP2.Test
 {

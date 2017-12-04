@@ -24,7 +24,8 @@ namespace SIP2.Field.Fixed
             base.DefaultField();
 
             this._isFixed = true;
-            this.FixedLength = 3;
+            this._fixedLength = 3;
+            this._isRequired = true;
         }
     }
 }

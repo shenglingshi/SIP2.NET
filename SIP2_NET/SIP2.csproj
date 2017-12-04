@@ -135,7 +135,7 @@
     <Compile Include="Field\Variable\Item\PermanentLocationField.cs" />
     <Compile Include="Field\Variable\Item\PrintLineField.cs" />
     <Compile Include="Field\Variable\Check\SortBinField.cs" />
-    <Compile Include="Field\Variable\Status\SupportedMessageField.cs" />
+    <Compile Include="Field\Variable\Status\SupportedMessagesField.cs" />
     <Compile Include="Field\Variable\Status\TerminalLocationField.cs" />
     <Compile Include="Field\Variable\Check\TransactionIdField.cs" />
     <Compile Include="InvengoSip.cs" />
@@ -181,7 +181,7 @@
     <Compile Include="Patron.cs" />
     <Compile Include="SIP.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Util\RequestCommandUtil.cs" />
+    <Compile Include="Util\CommandUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

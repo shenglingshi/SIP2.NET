@@ -63,7 +63,8 @@ namespace SIP2.Response
                 new TransactionDateField() { Name="DateTimeSync" },
                 new ProtocolVersionField(),
                 new InstitutionIdField(),
-                new SupportedMessageField(),
+                new LibraryNameField(),
+                new SupportedMessagesField(),
                 new TerminalLocationField(),
                 new ScreenMessageField(),
                 new PrintLineField()

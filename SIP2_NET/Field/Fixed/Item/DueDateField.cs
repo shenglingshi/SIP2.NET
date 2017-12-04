@@ -20,6 +20,7 @@ namespace SIP2.Field.Fixed
             base.DefaultField();
 
             this._id = "AH";
+            this._isRequired = true;
         }
     }
 }

@@ -50,7 +50,7 @@ namespace SIP2.Response
                 new PatronStatusField(),
                 new LanguageField(),
                 new TransactionDateField(),
-                new InstitutionIdField(),
+                new InstitutionIdField() { IsRequired=true },
                 new PatronIdentifierField(),
                 new PersonalNameField(),
                 new ValidPatronField(),
