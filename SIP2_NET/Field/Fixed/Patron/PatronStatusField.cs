@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SIP2.Field.Fixed
 {
-    public sealed class PatronStatusField:BaseSignleValueField<string>
+    public sealed class PatronStatusField:BaseSingleValueField<string>
     {
         public PatronStatusField() { }
 
@@ -19,7 +19,6 @@ namespace SIP2.Field.Fixed
 
             this._isFixed = true;
             this._fixedLength = 14;
-            this._name = "PatronStatus";
         }
     }
 }

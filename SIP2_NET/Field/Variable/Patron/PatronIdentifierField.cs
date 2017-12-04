@@ -20,7 +20,6 @@ namespace SIP2.Field.Variable
         protected override void DefaultField()
         {
             base.DefaultField();
-            this._name = "PatronIdentifier";
             this._id = "AA";
         }
     }

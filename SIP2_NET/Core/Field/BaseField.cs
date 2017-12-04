@@ -172,6 +172,8 @@ namespace SIP2.Core.Field
         /// </summary>
         protected virtual void DefaultField()
         {
+            var fieldName = this.GetType().Name.Replace("Field", "");
+            this._name = fieldName;
         }
 
         public override string ToString()

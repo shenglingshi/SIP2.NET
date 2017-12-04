@@ -24,18 +24,9 @@ namespace SIP2.Response
         /// <param name="command"></param>
         public LoginResponseCommand(string command):base(command)
         {
-        }
-
-        public override void Parse()
-        {
             this.CommandFields = new List<IField>() {
                 new IsOkField(),
             };
-
-            base.Parse();
         }
-
-
-
     }
 }

@@ -12,7 +12,7 @@ namespace SIP2.Response
     /// <summary>
     /// 
     /// </summary>
-    public sealed class PatronInformationResponseCommand : BasePatronResponseCommand
+    public sealed partial class PatronInformationResponseCommand : BasePatronResponseCommand
     {
         public string PatronStatus { get; set; }
 
@@ -75,11 +75,6 @@ namespace SIP2.Response
 
 
         public PatronInformationResponseCommand(string command) : base(command) {
-
-        }
-
-        public override void Parse()
-        {
             this.CommandFields = new List<IField>() {
                 new PatronStatusField(),
                 new LanguageField(),
@@ -112,9 +107,6 @@ namespace SIP2.Response
                 new HomePhoneNumberField(),
                 new ScreenMessageField()
             };
-
-            base.Parse();
         }
-
     }
 }

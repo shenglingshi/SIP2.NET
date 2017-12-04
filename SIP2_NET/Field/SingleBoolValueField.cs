@@ -7,10 +7,16 @@ using System.Threading.Tasks;
 
 namespace SIP2.Field
 {
-    public sealed class SingleBoolValueField : BaseSignleValueField<bool>
+    public sealed class SingleBoolValueField : BaseSingleValueField<bool>
     {
+        public SingleBoolValueField() : base() { }
+
         public SingleBoolValueField(bool value) : base(value)
         {
+
+            this._isRequired = true;
+            this._isFixed = true;
+            this._fixedLength = 1;
         }
     }
 }

@@ -31,8 +31,18 @@ namespace SIP2.Response
                 int position = 3;
                 foreach (var item in this.CommandFields)
                 {
+                    //是否定义映射的属性
                     if (!string.IsNullOrEmpty(item.Name))
                     {
+                        //是否是必选的字段
+                        if (!item.IsRequired)
+                        {
+                            //是否存在必选值
+                            if (!this.Command.Contains(item.ID))
+                            {
+                                continue;
+                            }
+                        }
                         var property = this.GetType().GetProperty(item.Name);
                         if (property != null)
                         {
@@ -46,26 +56,37 @@ namespace SIP2.Response
                                 fieldValue = GetVariableLengthFieldValue(position, item.Split);
                             }
 
-                            if (property.PropertyType == typeof(int))
+                            if(!string.IsNullOrEmpty(fieldValue))
                             {
-                                property.SetValue(this, Convert.ToInt32(fieldValue));
-                            }
-                            else if (property.PropertyType == typeof(DateTime))
-                            {
-                                property.SetValue(this, RequestCommandUtil.GetDate(fieldValue));
-                            }
-                            else if (property.PropertyType == typeof(bool))
-                            {
-                                if (fieldValue == "Y")
+                                //解析获取到的值
+                                if (property.PropertyType == typeof(int))
                                 {
-                                    property.SetValue(this, true);
+                                    property.SetValue(this, Convert.ToInt32(fieldValue));
                                 }
+                                else if (property.PropertyType == typeof(DateTime))
+                                {
+                                    property.SetValue(this, RequestCommandUtil.GetDate(fieldValue));
+                                }
+                                else if (property.PropertyType == typeof(bool))
+                                {
+                                    if (fieldValue == "Y")
+                                    {
+                                        property.SetValue(this, true);
+                                    }
+                                }
+                                else
+                                {
+                                    property.SetValue(this, fieldValue);
+                                }
+
+                                position += fieldValue.Length;
                             }else
                             {
-                                property.SetValue(this, fieldValue);
+                                if (item.IsRequired)
+                                {
+                                    throw new ParameterException($"can not find property {item.Name} value");
+                                }
                             }
-
-                            position += fieldValue.Length;
                         }
                     }
                 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SIP2.Field.Fixed
 {
-    public sealed class RecallItemsCountField:BaseSignleValueField<int>
+    public sealed class RecallItemsCountField:BaseSingleValueField<int>
     {
         public RecallItemsCountField() : base() { }
 
@@ -19,7 +19,6 @@ namespace SIP2.Field.Fixed
 
             this._isFixed = true;
             this._fixedLength = 4;
-            this._name = "RecallItemsCount";
         }
     }
 }

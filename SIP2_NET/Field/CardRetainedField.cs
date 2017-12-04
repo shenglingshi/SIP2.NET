@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SIP2.Field
 {
-    public sealed class CardRetainedField : BaseSignleValueField<bool>
+    public sealed class CardRetainedField : BaseSingleValueField<bool>
     {
         public CardRetainedField(bool value) : base(value)
         {

@@ -7,7 +7,7 @@ using SIP2.Core.Field;
 
 namespace SIP2.Field.Fixed
 {
-    public sealed class IsOkField:BaseSignleValueField<int>
+    public sealed class IsOkField:BaseSingleValueField<int>
     {
         public IsOkField() : base() { }
 
@@ -19,7 +19,6 @@ namespace SIP2.Field.Fixed
 
             this._isFixed = true;
             this._fixedLength = 1;
-            this._name = "IsOk";
         }
     }
 }

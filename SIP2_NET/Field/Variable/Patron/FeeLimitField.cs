@@ -20,7 +20,6 @@ namespace SIP2.Field.Variable
             base.DefaultField();
 
             this._id = "CC";
-            this._name = "FeeLimit";
             this._description = "the fee limit amount";
         }
 

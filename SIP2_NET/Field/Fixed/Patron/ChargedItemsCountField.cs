@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SIP2.Field.Fixed
 {
-    public sealed class ChargedItemsCountField:BaseSignleValueField<int>
+    public sealed class ChargedItemsCountField:BaseSingleValueField<int>
     {
         public ChargedItemsCountField() : base() { }
 

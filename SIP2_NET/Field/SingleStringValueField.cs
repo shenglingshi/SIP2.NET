@@ -10,8 +10,9 @@ namespace SIP2.Field
     /// <summary>
     /// 
     /// </summary>
-    public sealed class SingleStringValueField : BaseSignleValueField<string>
+    public sealed class SingleStringValueField : BaseSingleValueField<string>
     {
+        public SingleStringValueField() : base(){ }
         public SingleStringValueField(string value) : base(value)
         {
         }

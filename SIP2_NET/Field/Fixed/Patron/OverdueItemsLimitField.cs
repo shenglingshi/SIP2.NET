@@ -22,7 +22,6 @@ namespace SIP2.Field.Fixed
             this._isFixed = true;
             this._fixedLength = 4;
             this._id = "CA";
-            this._name = "OverdueItemsLimit";
         }
     }
 }

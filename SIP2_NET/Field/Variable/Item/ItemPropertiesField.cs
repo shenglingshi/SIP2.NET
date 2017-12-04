@@ -5,24 +5,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SIP2.Field
+namespace SIP2.Field.Variable
 {
     /// <summary>
     /// 
     /// </summary>
-    public sealed class ItemIdentifierField : BaseField<string>
+    public sealed class ItemPropertiesField : BaseField<string>
     {
 
-        public ItemIdentifierField(string value) : base(value) { }
+        public ItemPropertiesField() : base() { }
 
-        public ItemIdentifierField(string id,string value) : base(id, value) { }
+        public ItemPropertiesField(string value) : base(value) { }
 
+        public ItemPropertiesField(string id,string value) : base(id, value) { }
 
         protected override void DefaultField()
         {
             base.DefaultField();
-            this._name = "ItemIdentifier";
-            this._id = "AB";
+            this._id = "CH";
         }
     }
 }

@@ -5,13 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SIP2.Field
+namespace SIP2.Field.Variable
 {
     /// <summary>
     /// 
     /// </summary>
     public sealed class CurrentLocationField : BaseField<string>
     {
+        public CurrentLocationField() : base() { }
+
         public CurrentLocationField(string value) : base(value) { }
 
         public CurrentLocationField(string id, string value) : base(id, value) { }
@@ -19,7 +21,6 @@ namespace SIP2.Field
         protected override void DefaultField()
         {
             base.DefaultField();
-            this._name = "CurrentLocation";
             this._id = "AP";
         }
     }

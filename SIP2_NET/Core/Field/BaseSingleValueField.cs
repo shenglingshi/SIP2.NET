@@ -9,11 +9,11 @@ namespace SIP2.Core.Field
     /// <summary>
     /// 
     /// </summary>
-    public abstract class BaseSignleValueField<T> : BaseField<T>
+    public abstract class BaseSingleValueField<T> : BaseField<T>
     {
-        public BaseSignleValueField() { }
+        public BaseSingleValueField() { }
 
-        public BaseSignleValueField(T value) : base(value)
+        public BaseSingleValueField(T value) : base(value)
         {
             this._value = value;
         }

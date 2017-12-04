@@ -22,7 +22,6 @@ namespace SIP2.Field.Variable
         protected override void DefaultField()
         {
             base.DefaultField();
-            this._name = "PersonalName";
             this._id = "AE";
         }
     }

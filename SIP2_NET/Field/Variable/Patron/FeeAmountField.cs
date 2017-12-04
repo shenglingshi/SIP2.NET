@@ -14,7 +14,6 @@ namespace SIP2.Field.Variable
             base.DefaultField();
 
             this._id = "BV";
-            this._name = "FeeAmount";
         }
     }
 }

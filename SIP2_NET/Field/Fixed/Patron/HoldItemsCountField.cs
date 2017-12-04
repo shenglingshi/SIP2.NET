@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SIP2.Field.Fixed
 {
-    public sealed class HoldItemsCountField:BaseSignleValueField<int>
+    public sealed class HoldItemsCountField:BaseSingleValueField<int>
     {
         public HoldItemsCountField():base() { }
 

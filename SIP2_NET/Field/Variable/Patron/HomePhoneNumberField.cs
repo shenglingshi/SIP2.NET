@@ -22,7 +22,6 @@ namespace SIP2.Field.Variable
             base.DefaultField();
 
             this._id = "BF";
-            this._name = "HomePhoneNumber";
         }
 
 

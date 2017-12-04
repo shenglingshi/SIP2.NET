@@ -22,7 +22,6 @@ namespace SIP2.Field.Fixed
             this._isFixed = true;
             this._fixedLength = 3;
             this._id = "BH";
-            this._name = "CurrencyType";
 
         }
     }

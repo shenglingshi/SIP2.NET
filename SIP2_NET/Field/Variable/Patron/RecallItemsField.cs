@@ -20,7 +20,6 @@ namespace SIP2.Field.Variable
             base.DefaultField();
 
             this._id = "BU";
-            this._name = "RecallItems";
         }
     }
 }

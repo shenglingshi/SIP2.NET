@@ -21,7 +21,6 @@ namespace SIP2.Field.Variable
             base.DefaultField();
 
             this._id = "AU";
-            this._name = "ChargedItems";
         }
 
     }

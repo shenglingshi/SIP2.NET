@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SIP2.Field.Fixed
 {
-    public sealed class FineItemsCountField:BaseSignleValueField<int>
+    public sealed class FineItemsCountField:BaseSingleValueField<int>
     {
         public FineItemsCountField() : base() { }
 
@@ -19,7 +19,6 @@ namespace SIP2.Field.Fixed
 
             this._isFixed = true;
             this._fixedLength = 4;
-            this._name = "FineItemsCount";
         }
 
     }
